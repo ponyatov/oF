@@ -1,5 +1,8 @@
 # var
 MODULE = $(notdir $(CURDIR))
+NOW    = $(shell date +%d%m%y)
+REL    = $(shell git rev-parse --short=4 HEAD)
+BRANCH = $(shell git rev-parse --abbrev-ref HEAD)
 PEPS   = E26,E302,E305,E401,E402,E701,E702
 
 # tool
