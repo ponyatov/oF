@@ -4,7 +4,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake)
 
 # use -DCMAKE_TOOLCHAIN_FILE in cmd.line
 # include(Windows_)
-# include(Linux_)
+include(Linux_)
 
 project(${APP} VERSION 0.0.1 LANGUAGES C CXX)
 
@@ -32,7 +32,7 @@ set(ALL_SOURCES
 )
 
 # include(Windows)
-# include(Linux)
+include(Linux)
 
 # disabled due to flex lexer error
 # target_precompile_headers(${APP} PRIVATE ${H} )

@@ -36,7 +36,7 @@ run: bin/$(MODULE) $(F)
 
 # format
 .PHONY: format
-format: tmp/format_c tmp/format_d
+format: tmp/format_c
 tmp/format_c: $(C) $(H)
 	$(CF) -i $? && touch $@
 
@@ -48,6 +48,10 @@ bin/$(MODULE): $(C) $(H) $(CP) $(HP) $(CWD)/CMakeLists.txt Makefile
 # doc
 .PHONY: doc
 doc:
+
+.PHONY: doxy
+doxy: .doxygen $(C) $(H) README.md doc/*.md
+	rm -rf docs ; doxygen $< 1>/dev/null
 
 # install
 .PHONY: install update gz ref
