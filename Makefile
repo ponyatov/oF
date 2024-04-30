@@ -1,5 +1,10 @@
 # var
 MODULE  = $(notdir $(CURDIR))
+OS      = $(shell uname -o|tr / _)
+NOW     = $(shell date +%d%m%y)
+REL     = $(shell git rev-parse --short=4 HEAD)
+BRANCH  = $(shell git rev-parse --abbrev-ref HEAD)
+CORES  ?= $(shell grep processor /proc/cpuinfo | wc -l)
 
 # dir
 CWD   = $(CURDIR)
@@ -9,7 +14,7 @@ SRC   = $(CWD)/src
 TMP   = $(CWD)/tmp
 REF   = $(CWD)/ref
 GZ    = $(HOME)/gz
-BUILD = $(CWD)/tmp/$(MODULE)
+BUILD = $(CWD)/tmp/build
 
 # tool
 CURL = curl -L -o
@@ -24,8 +29,10 @@ F += $(wildcard lib/*.ini) $(wildcard lib/*.of) $(wildcard lib/*.f)
 CFLAGS += -I$(INC) -I$(TMP)
 
 # all
-.PHONY: all
-all:
+.PHONY: all run
+all: bin/$(MODULE) $(F)
+run: bin/$(MODULE) $(F)
+	$^
 
 # format
 .PHONY: format
@@ -35,7 +42,8 @@ tmp/format_c: $(C) $(H)
 
 # rule
 bin/$(MODULE): $(C) $(H) $(CP) $(HP) $(CWD)/CMakeLists.txt Makefile
-	cmake -DAPP=$(MODULE) -S$(CWD) -B$(BUILD) build
+	cmake -DAPP=$(MODULE) -S$(CWD) -B$(BUILD)
+	cd $(BUILD) ; $(MAKE) -j$(CORES)
 
 # doc
 .PHONY: doc
@@ -45,7 +53,6 @@ doc:
 .PHONY: install update gz ref
 install: doc gz ref
 	$(MAKE) update
-	dub build dfmt
 update:
 	sudo apt update
 	sudo apt install -yu `cat apt.txt`
