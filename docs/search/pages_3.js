@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sdl_20graphics_0',['SDL graphics',['../md_doc_SDL.html',1,'']]]
+  ['garbage_20collection_0',['garbage collection',['../md_doc_gc.html',1,'']]]
 ];

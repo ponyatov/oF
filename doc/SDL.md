@@ -1,1 +1,1 @@
-# SDL graphics
+# [[SDL/SDL|SDL]] graphics

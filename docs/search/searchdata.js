@@ -1,11 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "<afgmorsy",
+  0: "<[afgmorsy",
   1: "fgors",
   2: "amy",
   3: "y",
   4: "y",
-  5: "<fgs"
+  5: "<[fgo"
 };
 
 var indexSectionNames =
