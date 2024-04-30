@@ -20,6 +20,7 @@
         "ref/**": true,
     },
     "files.associations": {
+        "*.ini": "forth", "*.of": "forth", "*.f": "forth",
     },
 
     // editor
