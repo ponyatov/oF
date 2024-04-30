@@ -51,7 +51,7 @@ doc:
 
 .PHONY: doxy
 doxy: .doxygen $(C) $(H) README.md doc/*.md
-	rm -rf docs ; doxygen $< 1>/dev/null
+	rm -rf docs ; doxygen $< 1>/dev/null && git add -f docs
 
 # install
 .PHONY: install update gz ref
