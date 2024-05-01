@@ -1,0 +1,5 @@
+<map id="exec" name="exec">
+<area shape="rect" id="node1" href="$group__core.html" title="object core runtime" alt="" coords="5,5,56,31"/>
+<area shape="rect" id="node2" title="EDS: executable data structure (c)" alt="" coords="104,5,156,31"/>
+<area shape="rect" id="node3" href="$group__vm.html" title="Virtual FORTH Machine." alt="" coords="204,5,247,31"/>
+</map>

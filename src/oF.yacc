@@ -13,5 +13,5 @@
 %type<o>  ex
 
 %%
-syntax : | syntax ex { cout << $2 << endl; }
+syntax : | syntax ex { cout << $2->dump() << endl; }
 ex     :          cmd

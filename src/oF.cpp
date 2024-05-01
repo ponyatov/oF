@@ -22,3 +22,40 @@ extern void yyerror(string msg) {
     cerr << YYERR;
     exit(-1);
 }
+
+/// @ingroup core
+/// @{
+
+Object::Object(string V) { value = V; }
+Object::~Object() {}
+
+string Object::tag() { return "tag"; }
+string Object::val() { return value; }
+
+string Object::head() {
+    ostringstream os;
+    os << '<' << tag() << ':' << val() << '>';
+    return os.str();
+}
+
+string Object::dump(int depth) {  //
+    return this->head();
+}
+
+Exec::Exec(string V) : Object(V) {}
+
+/// @}
+
+/// @ingroup vm
+/// @{
+
+string Cmd::name(void (*F)()) {
+    Dl_info info;
+    return string("fn");
+}
+
+Cmd::Cmd(void (*F)()) : Exec(Cmd::name(F)) { fn = F; }
+
+void nop() {}
+
+/// @}

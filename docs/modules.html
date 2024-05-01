@@ -68,9 +68,11 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock">Here is a list of all modules:</div><div class="directory">
-<table class="directory">
+<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span>]</div><table class="directory">
 <tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__main.html" target="_self">main</a></td><td class="desc"><code><a class="el" href="group__main.html#ga0ddf1224851353fc92bfbff6f499fa97" title="program entry point">main()</a></code> </td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__core.html" target="_self">core</a></td><td class="desc"><a class="el" href="classObject.html">Object</a> core runtime </td></tr>
+<tr id="row_1_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_1_" class="arrow" onclick="toggleFolder('1_')">&#9660;</span><a class="el" href="group__core.html" target="_self">core</a></td><td class="desc"><a class="el" href="classObject.html" title="root class">Object</a> core runtime </td></tr>
+<tr id="row_1_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_1_0_" class="arrow" onclick="toggleFolder('1_0_')">&#9660;</span><a class="el" href="group__exec.html" target="_self">exec</a></td><td class="desc">EDS: executable data structure (c) </td></tr>
+<tr id="row_1_0_0_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a class="el" href="group__vm.html" target="_self">vm</a></td><td class="desc">Virtual FORTH Machine </td></tr>
 <tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__skelex.html" target="_self">skelex</a></td><td class="desc">Syntax parser </td></tr>
 </table>
 </div><!-- directory -->

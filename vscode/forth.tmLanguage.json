@@ -2,7 +2,7 @@
     "name": "forth",
     "scopeName": "script.forth",
     "fileTypes": [
-        "ini", "of", "f"
+        ".ini", ".of", ".f"
     ],
     "patterns": [
         {
@@ -26,7 +26,7 @@
             "patterns": [
                 {
                     "comment": "pythonic/shell line comment",
-                    "match": "№.*$",
+                    "match": "#.*$",
                     "name": "comment.line.number-sign"
                 },
                 {

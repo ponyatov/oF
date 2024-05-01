@@ -65,56 +65,100 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classObject-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Object Class Reference<div class="ingroups"><a class="el" href="group__core.html">core</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
+<p>root class  
+ <a href="classObject.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="oF_8hpp_source.html">oF.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Object:</div>
+<div class="dyncontent">
+<div class="center"><img src="classObject__inherit__graph.png" border="0" usemap="#aObject_inherit__map" alt="Inheritance graph"/></div>
+<map name="aObject_inherit__map" id="aObject_inherit__map">
+<area shape="rect" title="root class" alt="" coords="35,5,99,32"/>
+<area shape="rect" href="classExec.html" title="executable objects" alt="" coords="41,80,93,107"/>
+<area shape="rect" href="classCmd.html" title="VM command." alt="" coords="5,155,57,181"/>
+<area shape="rect" href="classVM.html" title="Virtual Machine." alt="" coords="82,155,125,181"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:ac90a03ac53b26cc394c92270ac2b0fd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#ac90a03ac53b26cc394c92270ac2b0fd8">Object</a> (string <a class="el" href="classObject.html#a1b7e0ce886691f81351ba1e4cb054a78">V</a>)</td></tr>
-<tr class="separator:ac90a03ac53b26cc394c92270ac2b0fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3e791419d84c4c346ef9499513b8e00"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#aa3e791419d84c4c346ef9499513b8e00">~Object</a> ()</td></tr>
-<tr class="separator:aa3e791419d84c4c346ef9499513b8e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">constructor</div></td></tr>
+<tr class="memitem:gac90a03ac53b26cc394c92270ac2b0fd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gac90a03ac53b26cc394c92270ac2b0fd8">Object</a> (string V)</td></tr>
+<tr class="memdesc:gac90a03ac53b26cc394c92270ac2b0fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="group__core.html#gac90a03ac53b26cc394c92270ac2b0fd8">More...</a><br /></td></tr>
+<tr class="separator:gac90a03ac53b26cc394c92270ac2b0fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8f5483f459e46687bd01e6f9977afd3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gae8f5483f459e46687bd01e6f9977afd3">~Object</a> ()</td></tr>
+<tr class="separator:gae8f5483f459e46687bd01e6f9977afd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">dump/stringify</div></td></tr>
+<tr class="memitem:affe8e3b76731e0410f9db28f56554656"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#affe8e3b76731e0410f9db28f56554656">tag</a> ()</td></tr>
+<tr class="memdesc:affe8e3b76731e0410f9db28f56554656"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>&lt;T:</code> type/class tag  <a href="classObject.html#affe8e3b76731e0410f9db28f56554656">More...</a><br /></td></tr>
+<tr class="separator:affe8e3b76731e0410f9db28f56554656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e3aa8bb6813b93f05adc6fd20825c6a"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a8e3aa8bb6813b93f05adc6fd20825c6a">val</a> ()</td></tr>
+<tr class="memdesc:a8e3aa8bb6813b93f05adc6fd20825c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>:V&gt;</code> object value as string  <a href="classObject.html#a8e3aa8bb6813b93f05adc6fd20825c6a">More...</a><br /></td></tr>
+<tr class="separator:a8e3aa8bb6813b93f05adc6fd20825c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05fe49063b2cd8156db336f1538cbe96"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a05fe49063b2cd8156db336f1538cbe96">head</a> ()</td></tr>
+<tr class="memdesc:a05fe49063b2cd8156db336f1538cbe96"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>&lt;T:V&gt;</code> object header  <a href="classObject.html#a05fe49063b2cd8156db336f1538cbe96">More...</a><br /></td></tr>
+<tr class="separator:a05fe49063b2cd8156db336f1538cbe96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a156ea2ab224d9a67ae23adb959a03104"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a156ea2ab224d9a67ae23adb959a03104">dump</a> (int depth=0)</td></tr>
+<tr class="memdesc:a156ea2ab224d9a67ae23adb959a03104"><td class="mdescLeft">&#160;</td><td class="mdescRight">full text-tree dump  <a href="classObject.html#a156ea2ab224d9a67ae23adb959a03104">More...</a><br /></td></tr>
+<tr class="separator:a156ea2ab224d9a67ae23adb959a03104"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a1b7e0ce886691f81351ba1e4cb054a78"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a1b7e0ce886691f81351ba1e4cb054a78">V</a></td></tr>
-<tr class="separator:a1b7e0ce886691f81351ba1e4cb054a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba883e5c9061751636964481aeef27a3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#aba883e5c9061751636964481aeef27a3">value</a></td></tr>
+<tr class="memdesc:aba883e5c9061751636964481aeef27a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">scalar value: object name, string, number  <a href="classObject.html#aba883e5c9061751636964481aeef27a3">More...</a><br /></td></tr>
+<tr class="separator:aba883e5c9061751636964481aeef27a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac90a03ac53b26cc394c92270ac2b0fd8" name="ac90a03ac53b26cc394c92270ac2b0fd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac90a03ac53b26cc394c92270ac2b0fd8">&#9670;&nbsp;</a></span>Object()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >root class </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a156ea2ab224d9a67ae23adb959a03104" name="a156ea2ab224d9a67ae23adb959a03104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a156ea2ab224d9a67ae23adb959a03104">&#9670;&nbsp;</a></span>dump()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Object::Object </td>
+          <td class="memname">string Object::dump </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>V</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>full text-tree dump </p>
 
 </div>
 </div>
-<a id="aa3e791419d84c4c346ef9499513b8e00" name="aa3e791419d84c4c346ef9499513b8e00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3e791419d84c4c346ef9499513b8e00">&#9670;&nbsp;</a></span>~Object()</h2>
+<a id="a05fe49063b2cd8156db336f1538cbe96" name="a05fe49063b2cd8156db336f1538cbe96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05fe49063b2cd8156db336f1538cbe96">&#9670;&nbsp;</a></span>head()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Object::head </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>&lt;T:V&gt;</code> object header </p>
+
+</div>
+</div>
+<a id="affe8e3b76731e0410f9db28f56554656" name="affe8e3b76731e0410f9db28f56554656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe8e3b76731e0410f9db28f56554656">&#9670;&nbsp;</a></span>tag()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -123,7 +167,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Object::~Object </td>
+          <td class="memname">string Object::tag </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -131,16 +175,17 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p><code>&lt;T:</code> type/class tag </p>
+
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1b7e0ce886691f81351ba1e4cb054a78" name="a1b7e0ce886691f81351ba1e4cb054a78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b7e0ce886691f81351ba1e4cb054a78">&#9670;&nbsp;</a></span>V</h2>
+<a id="a8e3aa8bb6813b93f05adc6fd20825c6a" name="a8e3aa8bb6813b93f05adc6fd20825c6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e3aa8bb6813b93f05adc6fd20825c6a">&#9670;&nbsp;</a></span>val()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,7 +194,35 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string Object::V</td>
+          <td class="memname">string Object::val </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>:V&gt;</code> object value as string </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aba883e5c9061751636964481aeef27a3" name="aba883e5c9061751636964481aeef27a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba883e5c9061751636964481aeef27a3">&#9670;&nbsp;</a></span>value</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Object::value</td>
         </tr>
       </table>
   </td>
@@ -159,10 +232,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>scalar value: object name, string, number </p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>inc/<a class="el" href="oF_8hpp_source.html">oF.hpp</a></li>
+<li>src/<a class="el" href="oF_8cpp.html">oF.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

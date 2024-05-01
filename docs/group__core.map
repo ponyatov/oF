@@ -1,0 +1,4 @@
+<map id="core" name="core">
+<area shape="rect" id="node1" title="object core runtime" alt="" coords="5,5,56,31"/>
+<area shape="rect" id="node2" href="$group__exec.html" title="EDS: executable data structure (c)" alt="" coords="104,5,156,31"/>
+</map>

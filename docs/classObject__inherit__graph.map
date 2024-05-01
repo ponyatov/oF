@@ -1,0 +1,6 @@
+<map id="Object" name="Object">
+<area shape="rect" id="node1" title="root class" alt="" coords="35,5,99,32"/>
+<area shape="rect" id="node2" href="$classExec.html" title="executable objects" alt="" coords="41,80,93,107"/>
+<area shape="rect" id="node3" href="$classCmd.html" title="VM command." alt="" coords="5,155,57,181"/>
+<area shape="rect" id="node4" href="$classVM.html" title="Virtual Machine." alt="" coords="82,155,125,181"/>
+</map>
