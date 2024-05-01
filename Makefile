@@ -1,47 +1,90 @@
 # var
-MODULE = $(notdir $(CURDIR))
-NOW    = $(shell date +%d%m%y)
-REL    = $(shell git rev-parse --short=4 HEAD)
-BRANCH = $(shell git rev-parse --abbrev-ref HEAD)
-PEPS   = E26,E302,E305,E401,E402,E701,E702
+MODULE  = $(notdir $(CURDIR))
+OS      = $(shell uname -o|tr / _)
+NOW     = $(shell date +%d%m%y)
+REL     = $(shell git rev-parse --short=4 HEAD)
+BRANCH  = $(shell git rev-parse --abbrev-ref HEAD)
+CORES  ?= $(shell grep processor /proc/cpuinfo | wc -l)
+
+# dir
+CWD   = $(CURDIR)
+BIN   = $(CWD)/bin
+INC   = $(CWD)/inc
+SRC   = $(CWD)/src
+TMP   = $(CWD)/tmp
+REF   = $(CWD)/ref
+GZ    = $(HOME)/gz
+BUILD = $(CWD)/tmp/build
 
 # tool
 CURL = curl -L -o
-CF   = clang-format-11 -style=file -i
-PY   = $(shell which python3)
-PEP  = $(shell which autopep8) --ignore=$(PEPS) --in-place
+CF   = clang-format -style=file
 
 # src
-Y  = metaL.py $(MODULE).py
-F  = lib/$(MODULE).f
-S += $(Y) $(F) $(C) $(H)
+C += $(wildcard src/*.c*)
+H += $(wildcard inc/*.h*)
+F += lib/$(MODULE).ini $(wildcard lib/*.of) $(wildcard lib/*.f)
+
+CP += tmp/$(MODULE).lexer.cpp tmp/$(MODULE).parser.cpp
+HP += tmp/$(MODULE).lexer.hpp tmp/$(MODULE).parser.hpp
+
+# cfg
+CFLAGS += -I$(INC) -I$(TMP)
 
 # all
-all: bin/$(MODULE) lib/$(MODULE)
+.PHONY: all run
+all: bin/$(MODULE) $(F)
+run: bin/$(MODULE) $(F)
 	$^
-
-meta: $(PY) $(MODULE).py
-	$^
-	$(MAKE) tmp/format_py
 
 # format
-format: tmp/format_py
-tmp/format_py: $(Y)
-	$(PEP) $? && touch $@
+.PHONY: format
+format: tmp/format_c
+tmp/format_c: $(C) $(H)
+	$(CF) -i $? && touch $@
+
+# rule
+bin/$(MODULE): $(C) $(H) $(CP) $(HP) $(CWD)/CMakeLists.txt Makefile
+	cmake -DAPP=$(MODULE) -S$(CWD) -B$(BUILD)
+	cd $(BUILD) ; $(MAKE) -j$(CORES)
+
+tmp/$(MODULE).lexer.cpp: src/$(MODULE).lex
+	flex -o $@ $<
+tmp/$(MODULE).parser.cpp: src/$(MODULE).yacc
+	bison -o $@ $<
+
+# doc
+.PHONY: doc
+doc:
+
+.PHONY: doxy
+doxy: .doxygen $(C) $(H) README.md doc/*.md
+	rm -rf docs ; rsync -r ~/metadoc/$(MODULE)/* doc
+	doxygen $< 1>/dev/null && git add -f doc docs
+
+# install
+.PHONY: install update gz ref
+install: doc gz ref
+	$(MAKE) update
+update:
+	sudo apt update
+	sudo apt install -yu `cat apt.txt`
+gz:
+ref:
 
 # merge
-MERGE  = Makefile README.md .gitignore .clang-format apt.txt $(S)
-MERGE += .vscode bin doc lib src tmp
+MERGE += Makefile README.md apt.txt apt.msys LICENSE
+MERGE += .clang-format .doxygen .gitignore
+MERGE += .vscode bin doc lib inc src tmp ref
 
-.PHONY: dev shadow release zip
-
+.PHONY: dev
 dev:
 	git push -v
 	git checkout $@
 	git pull -v
 	git checkout shadow -- $(MERGE)
-#	$(MAKE) doxy ; git add -f docs
 
+.PHONY: shadow
 shadow:
 	git push -v
 	git checkout $@
@@ -53,7 +96,9 @@ release:
 	git push -v --tags
 	$(MAKE) shadow
 
-ZIP = tmp/$(MODULE)_$(BRANCH)_$(NOW)_$(REL).src.zip
+.PHONY: zip
 zip:
-	git archive --format zip --output $(ZIP) HEAD
-#	$(MAKE) doxy ; zip -r $(ZIP) docs
+	git archive \
+		--format zip \
+		--output $(TMP)/$(MODULE)_$(NOW)_$(REL).src.zip \
+	HEAD
