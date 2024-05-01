@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['garbage_20collection_0',['garbage collection',['../md_doc_gc.html',1,'']]],
-  ['gc_2emd_1',['gc.md',['../gc_8md.html',1,'']]]
+  ['forth_0',['FORTH',['../md_doc_FORTH.html',1,'']]],
+  ['forth_2emd_1',['FORTH.md',['../FORTH_8md.html',1,'']]]
 ];

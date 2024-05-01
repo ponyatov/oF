@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../oF_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;oF.cpp'],['../oF_8hpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;oF.cpp']]]
+  ['main_0',['main',['../group__main.html#ga0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;oF.cpp'],['../group__main.html#ga0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;oF.cpp']]]
 ];

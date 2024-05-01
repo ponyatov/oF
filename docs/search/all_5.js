@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../oF_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;oF.cpp'],['../oF_8hpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;oF.cpp']]]
+  ['garbage_20collection_0',['garbage collection',['../md_doc_gc.html',1,'']]],
+  ['gc_2emd_1',['gc.md',['../gc_8md.html',1,'']]]
 ];

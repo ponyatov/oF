@@ -25,6 +25,9 @@ C += $(wildcard src/*.c*)
 H += $(wildcard inc/*.h*)
 F += $(wildcard lib/*.ini) $(wildcard lib/*.of) $(wildcard lib/*.f)
 
+CP += tmp/$(MODULE).lexer.cpp tmp/$(MODULE).parser.cpp
+HP += tmp/$(MODULE).lexer.hpp tmp/$(MODULE).parser.hpp
+
 # cfg
 CFLAGS += -I$(INC) -I$(TMP)
 
