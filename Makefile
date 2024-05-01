@@ -75,7 +75,8 @@ ref:
 # merge
 MERGE += Makefile README.md apt.txt apt.msys LICENSE
 MERGE += .clang-format .doxygen .gitignore
-MERGE += .vscode bin doc lib inc src tmp ref
+MERGE += .vscode bin doc lib inc src tmp ref vscode
+MERGE += cmake CMakeLists.txt
 
 .PHONY: dev
 dev:
