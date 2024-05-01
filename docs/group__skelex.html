@@ -76,9 +76,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga309773bdd56fc4ec055dac74de293720"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__skelex.html#ga309773bdd56fc4ec055dac74de293720">yylex</a> ()</td></tr>
-<tr class="memdesc:ga309773bdd56fc4ec055dac74de293720"><td class="mdescLeft">&#160;</td><td class="mdescRight">return token  <a href="group__skelex.html#ga309773bdd56fc4ec055dac74de293720">More...</a><br /></td></tr>
-<tr class="separator:ga309773bdd56fc4ec055dac74de293720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa40b27ae32d6d1ae7160bd6256e08eb8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__skelex.html#gaa40b27ae32d6d1ae7160bd6256e08eb8">yylex</a> ()</td></tr>
+<tr class="memdesc:gaa40b27ae32d6d1ae7160bd6256e08eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">return token  <a href="group__skelex.html#gaa40b27ae32d6d1ae7160bd6256e08eb8">More...</a><br /></td></tr>
+<tr class="separator:gaa40b27ae32d6d1ae7160bd6256e08eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacd8617a8f2ac0de8bc1cc032cf449e19"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__skelex.html#gacd8617a8f2ac0de8bc1cc032cf449e19">yyparse</a> ()</td></tr>
 <tr class="memdesc:gacd8617a8f2ac0de8bc1cc032cf449e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">parser loop  <a href="group__skelex.html#gacd8617a8f2ac0de8bc1cc032cf449e19">More...</a><br /></td></tr>
 <tr class="separator:gacd8617a8f2ac0de8bc1cc032cf449e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,6 +94,15 @@ Variables</h2></td></tr>
 <tr class="memitem:gad9264b77d56b6971f29739e2bda77f51"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__skelex.html#gad9264b77d56b6971f29739e2bda77f51">yytext</a></td></tr>
 <tr class="memdesc:gad9264b77d56b6971f29739e2bda77f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">current lexed token value  <a href="group__skelex.html#gad9264b77d56b6971f29739e2bda77f51">More...</a><br /></td></tr>
 <tr class="separator:gad9264b77d56b6971f29739e2bda77f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46af646807e0797e72b6e8945e7ea88b"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__skelex.html#ga46af646807e0797e72b6e8945e7ea88b">yyin</a></td></tr>
+<tr class="memdesc:ga46af646807e0797e72b6e8945e7ea88b"><td class="mdescLeft">&#160;</td><td class="mdescRight">input file handler  <a href="group__skelex.html#ga46af646807e0797e72b6e8945e7ea88b">More...</a><br /></td></tr>
+<tr class="separator:ga46af646807e0797e72b6e8945e7ea88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga53be452efd4ab470618a809085f3edcb"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__skelex.html#ga53be452efd4ab470618a809085f3edcb">yyfile</a></td></tr>
+<tr class="memdesc:ga53be452efd4ab470618a809085f3edcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">current file name  <a href="group__skelex.html#ga53be452efd4ab470618a809085f3edcb">More...</a><br /></td></tr>
+<tr class="separator:ga53be452efd4ab470618a809085f3edcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd414a84707d614aaa5d9cfc2f18df46"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__skelex.html#gacd414a84707d614aaa5d9cfc2f18df46">nofile</a></td></tr>
+<tr class="memdesc:gacd414a84707d614aaa5d9cfc2f18df46"><td class="mdescLeft">&#160;</td><td class="mdescRight">file name for REPL  <a href="group__skelex.html#gacd414a84707d614aaa5d9cfc2f18df46">More...</a><br /></td></tr>
+<tr class="separator:gacd414a84707d614aaa5d9cfc2f18df46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >syntax parser </p>
@@ -118,14 +127,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ga309773bdd56fc4ec055dac74de293720" name="ga309773bdd56fc4ec055dac74de293720"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga309773bdd56fc4ec055dac74de293720">&#9670;&nbsp;</a></span>yylex()</h2>
+<a id="gaa40b27ae32d6d1ae7160bd6256e08eb8" name="gaa40b27ae32d6d1ae7160bd6256e08eb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa40b27ae32d6d1ae7160bd6256e08eb8">&#9670;&nbsp;</a></span>yylex()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">yylex </td>
+          <td class="memname">int yylex </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -157,6 +166,78 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="gacd414a84707d614aaa5d9cfc2f18df46" name="gacd414a84707d614aaa5d9cfc2f18df46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd414a84707d614aaa5d9cfc2f18df46">&#9670;&nbsp;</a></span>nofile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* nofile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>file name for REPL </p>
+
+</div>
+</div>
+<a id="ga53be452efd4ab470618a809085f3edcb" name="ga53be452efd4ab470618a809085f3edcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga53be452efd4ab470618a809085f3edcb">&#9670;&nbsp;</a></span>yyfile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* yyfile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>current file name </p>
+
+</div>
+</div>
+<a id="ga46af646807e0797e72b6e8945e7ea88b" name="ga46af646807e0797e72b6e8945e7ea88b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga46af646807e0797e72b6e8945e7ea88b">&#9670;&nbsp;</a></span>yyin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* yyin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>input file handler </p>
+
+</div>
+</div>
 <a id="ga5e36364965360da7b7cdfc2188e0af84" name="ga5e36364965360da7b7cdfc2188e0af84"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga5e36364965360da7b7cdfc2188e0af84">&#9670;&nbsp;</a></span>yylineno</h2>
 

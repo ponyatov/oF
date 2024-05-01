@@ -1,6 +1,10 @@
+/// @file
+/// @brief parser
 %{
     #include "oF.hpp"
     #include "oF.lexer.hpp"
+    char *nofile = "";
+    char *yyfile = nofile;
 %}
 
 %defines %union { Object *o; }

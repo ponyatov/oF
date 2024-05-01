@@ -35,7 +35,7 @@ class Object {
     string V;
     Object(string V);
     virtual ~Object();
-}
+};
 
 /// @}
 
@@ -43,9 +43,12 @@ class Object {
 /// @brief syntax parser
 /// @{
 
-extern int yylex();                          ///< return token
+extern int yylex();               ///< return token
 extern int yylineno;              ///< current line number
 extern char *yytext;              ///< current lexed token value
+extern FILE *yyin;                ///< input file handler
+extern char *yyfile;              ///< current file name
+extern char *nofile;              ///< file name for @ref REPL
 extern int yyparse();             ///< parser loop
 extern void yyerror(string msg);  ///< syntax error callbaek
 // #include "oF.lexer.hpp"

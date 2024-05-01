@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "<[acfgmorsvy~",
+  0: "<[acefgmnorsvy~",
   1: "o",
   2: "fgors",
   3: "amoy~",
-  4: "vy",
+  4: "enovy",
   5: "y",
   6: "cms",
   7: "<[fgo"

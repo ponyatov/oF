@@ -48,6 +48,11 @@ bin/$(MODULE): $(C) $(H) $(CP) $(HP) $(CWD)/CMakeLists.txt Makefile
 	cmake -DAPP=$(MODULE) -S$(CWD) -B$(BUILD)
 	cd $(BUILD) ; $(MAKE) -j$(CORES)
 
+tmp/$(MODULE).lexer.cpp: src/$(MODULE).lex
+	flex -o $@ $<
+tmp/$(MODULE).parser.cpp: src/$(MODULE).yacc
+	bison -o $@ $<
+
 # doc
 .PHONY: doc
 doc:
