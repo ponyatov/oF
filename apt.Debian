@@ -3,4 +3,4 @@ code meld doxygen
 g++ cmake pkg-config clang-format
 gdb gdbserver valgrind cgroup-tools
 flex bison ragel libreadline-dev
-ocaml opam
+ocaml opam dune utop
