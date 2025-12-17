@@ -1,0 +1,6 @@
+# dune init project of
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /home/dponyatov/.cache/dune/db
+# Workspace root: /home/dponyatov/of/of
+# Auto-detected concurrency: 4
